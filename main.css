@@ -7,35 +7,26 @@ body {
   padding: 0;
 }
 
-h1, h2, h3 {
-  color: #fff; /* White */
+h1, h2 {
+  color: #fff; /* White Text */
+  text-align: center;
 }
 
-a {
-  color: #fff; /* White Links */
-  text-decoration: none;
-}
-
-a:hover {
-  color: #f0f0f0; /* Lighter white on hover */
-}
-
-/* Smooth Transition */
-a, button {
-  transition: all 0.3s ease;
-}
-
-/* Buttons */
 button {
   background-color: #444; /* Dark grey button */
-  color: #fff; 
+  color: #fff;
   border: none;
   padding: 10px 20px;
+  margin: 20px;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
 button:hover {
   background-color: #666; /* Lighter grey on hover */
+  transform: scale(1.1); /* Slightly enlarge the button */
 }
 
 /* Popup Styling */
@@ -55,4 +46,35 @@ button:hover {
 
 .popup.active {
   display: block;
+}
+
+/* Smooth Page Load Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Code Snippet Styling */
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #888;
+}
+
+#copyButton {
+  margin-top: 10px;
 }
